@@ -1,31 +1,24 @@
-#+TITLE:     Pomodoro
-#+DATE:      2012-03-25 dom
-#+DESCRIPTION:
-#+KEYWORDS:
-#+LANGUAGE:  en
-#+OPTIONS:   H:3 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
-#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
-#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
-#+EXPORT_SELECT_TAGS: export
-#+EXPORT_EXCLUDE_TAGS: noexport
-#+LINK_UP:
-#+LINK_HOME:
-#+XSLT:
-
-A timer for the Pomodoro Technique
-[[http://www.pomodorotechnique.com]]
+A timer for the Pomodoro Technique [[http://www.pomodorotechnique.com]]
 
 This pomodoro implementation is based on the ideas of Dave Kerschner's
 pomodoro.el which you can get from [[https://github.com/docgnome/pomodoro.el][here]].
 
 * Installation
-  Simply place pomodoro.el in your Emacs load path and add (require
-  'pomodoro) to your .emacs
+  Simply place pomodoro.el in your Emacs load path and add
+
+  #+BEGIN_SRC emacs-lisp
+  (require 'pomodoro)
+  #+END_SRC
+
+  to your .emacs
 
 * Usage
-  Use M-x pomodoro-start to start. This will cause a timer to appear
-  in the mode line. When the timer runs down a break period will start
-  M-x pomodoro-stop to stop it. A read only buffer is created to
+  Use ~M-x pomodoro-start~ to start. This will cause a timer to appear
+  in the mode line. When the timer runs down a break period will
+  start. You stop your pomodoro cycles with ~M-x pomodoro-stop~.
+
+  A read only buffer, by default called ~*pomodoros*~, will keep track
+  of your progress (when a pomodoro start, finish, etc.)
 
 * Customization
   Several customizations are available through M-x customize-group RET
