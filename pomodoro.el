@@ -41,7 +41,7 @@
 
 (defcustom pomodoro-work-cycle
   '(:length 25
-    :start-message "¡Un pomodoro más!"
+    :start-message "Let's go, do a pomodoro!"
     :name "Pomodoro"
     :mode-line-string "w")
   "Characteristics of a pomodoro work cycle"
@@ -55,7 +55,7 @@
 
 (defcustom pomodoro-break-cycle
   '(:length 5
-    :start-message "¡A descansar!"
+    :start-message "Time to take a break!"
     :name "Break"
     :mode-line-string "b")
   "Characteristics of a pomodoro break cycle"
@@ -64,7 +64,7 @@
 
 (defcustom pomodoro-long-break-cycle
   '(:length 15
-    :start-message "¡Bien hecho!, es hora de un descanso largo."
+    :start-message "Well done! you earned a longer break."
     :name "Long Break"
     :mode-line-string "B")
   "Characteristics of a pomodoro long break cycle"
