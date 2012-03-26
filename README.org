@@ -21,5 +21,5 @@ pomodoro.el which you can get from [[https://github.com/docgnome/pomodoro.el][he
   of your progress (when a pomodoro start, finish, etc.)
 
 * Customization
-  Several customizations are available through M-x customize-group RET
-  pomodoro RET
+  Several customizations are available through ~M-x customize-group
+  RET pomodoro RET~
