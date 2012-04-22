@@ -132,15 +132,20 @@
 
 (defun pomodoro-start ()
   (interactive)
+  (when pomodoro-timer
+    (error "The Pomodoro timer is already runnnig"))
   (pomodoro--log "[START POMODORO]")
   (pomodoro-begin-cycle pomodoro-work-cycle)
   (setq pomodoro-timer (run-with-timer 0 1 'pomodoro-tick)))
 
 (defun pomodoro-stop ()
   (interactive)
+  (when (not pomodoro-timer)
+    (error "The Pomodoro timer is not currently active"))
   (pomodoro--log "[STOP POMODORO]")
   (cancel-timer pomodoro-timer)
   (setq pomodoro-mode-line-string ""
+        pomodoro-timer nil
         pomodoro-current-cycle nil)
   (force-mode-line-update))
 
