@@ -158,8 +158,10 @@
 (defun pomodoro-reset ()
   (interactive)
   (pomodoro--log "[RESET POMODODO]")
-  (pomodoro-stop)
-  (setq pomodoro-pomodoros 0))
+  (setq pomodoro-pomodoros 0)
+  (condition-case ex
+      (pomodoro-stop)
+    ('error nil)))                      ;expected
 
 (setq-default mode-line-format (cons mode-line-format '(pomodoro-mode-line-string)))
 
